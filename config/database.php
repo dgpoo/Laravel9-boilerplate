@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -45,12 +45,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'url' => env('DATABASE_URL','postgres://yofmbhoimfntln:bc1f69ed3c552c52b033b686e32c6397f5be0c6b3dde28019ea32c5693f91e58@ec2-54-195-76-73.eu-west-1.compute.amazonaws.com:5432/db4i07gocujr3t'),
+            'host' => env('DB_HOST', 'ec2-54-195-76-73.eu-west-1.compute.amazonaws.com'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'db4i07gocujr3t'),
+            'username' => env('DB_USERNAME', 'yofmbhoimfntln'),
+            'password' => env('DB_PASSWORD', 'bc1f69ed3c552c52b033b686e32c6397f5be0c6b3dde28019ea32c5693f91e58'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
